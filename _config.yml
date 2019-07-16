@@ -19,7 +19,7 @@ plainwhite:
   # 谷歌的站点统计
   analytics_id: UA-143949448-1
   # disqus的评论系统
-  disqus_shortname: phaedo
+  disqus_shortname: phaedosblog
 
   # generate social links in footer
   social_links:
