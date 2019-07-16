@@ -6,8 +6,12 @@
 <body>
 	<main class="container">
 		<section class="about">
-			<img src="{{ "/assets/photoofme.jpeg" | relative_url }}" alt="{{ site.plainwhite.name }}">
-			<h2>{{ site.plainwhite.name }}</h2>
+			<a href="{{ site.url }}">
+			  <img src="{{ "/assets/photoofme.jpeg" | relative_url }}" alt="{{ site.plainwhite.name }}">
+			</a>
+			<a href="{{ site.url }}">
+			  <h2>{{ site.plainwhite.name }}</h2>
+			</a>
 			<p class="tagline">{{ site.plainwhite.tagline }}</p>
 			<ul class="social">
 				{%- if site.url -%}
