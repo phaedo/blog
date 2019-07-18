@@ -13,7 +13,6 @@ vim ~/.zshrc
 ```
 
 3. 找到插件配置项，增加`docker docker-compose`两个插件  
-![zshrc-docker-img](https://github.com/phaedo/blog/blob/master/post-assets/2019-07/zshrc-docker.png)
+![zshrc-docker-img]({{site.url}}/post-assets/2019-07/zshrc-docker.png)
 
 4. 启动以后，docker命令就能补全了
-
