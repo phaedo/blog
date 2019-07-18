@@ -7,13 +7,13 @@ categories: bash
 
 1. 确定你使用了oh-my-zsh的shell环境；（如果没有安装的话，推荐使用，官方地址：https://ohmyz.sh/）
 
-2. 打开/zshrc文件
+2. 打开/zshrc文件  
 ```bash
 vim ~/.zshrc
 ```
 
-3. 找到插件配置项，增加`docker docker-compose`两个插件
-![zshrc](../post-assets/2019-07/zshrc-docker.png)
+3. 找到插件配置项，增加`docker docker-compose`两个插件  
+![zshrc-docker-img](https://github.com/phaedo/blog/blob/master/post-assets/2019-07/zshrc-docker.png)
 
 4. 启动以后，docker命令就能补全了
 
