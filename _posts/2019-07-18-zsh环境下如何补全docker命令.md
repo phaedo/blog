@@ -12,7 +12,10 @@ categories: bash
 vim ~/.zshrc
 ```
 
-3. 找到插件配置项，增加`docker docker-compose`两个插件  
+3. 找到插件配置项`plugins=()`，增加`docker docker-compose`两个插件  
 ![zshrc-docker-img](https://phaedo.github.io/blog/post-assets/2019-07/zshrc-docker.png)
 
 4. 启动以后，docker命令就能补全了
+```bash
+source ~/.zshrc
+```
