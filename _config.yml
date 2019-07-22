@@ -217,9 +217,9 @@ font:
   #LinkLabel: Link
 social:
   Github: https://github.com/phaedo
-  Twitter: https://twitter.com/siyuenlin
+  Zhihu: https://www.zhihu.com/people/lin-si-yuan-13
+  #Twitter: https://twitter.com/siyuenlin
   Mail: mailto:siyuen.lin@gmail.com
-
 
 
 # Social Links Icons
@@ -235,6 +235,7 @@ social_icons:
   Twitter: twitter
   Weibo: weibo
   Mail: envelope
+  Zhihu: zhihu
 
 
 # Sidebar Avatar
