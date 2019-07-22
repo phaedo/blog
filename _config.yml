@@ -231,11 +231,11 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github-square
+  GitHub: github
   Twitter: twitter
   Weibo: weibo
   Mail: envelope
-  Zhihu: book
+  Zhihu: search-plus
 
 
 # Sidebar Avatar
