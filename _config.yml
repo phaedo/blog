@@ -215,6 +215,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 #social:
   #LinkLabel: Link
+social:
   github: https://github.com/phaedo
   twitter: https://twitter.com/siyuenlin
   envelope: mailto:siyuen.lin@gmail.com
