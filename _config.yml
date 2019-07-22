@@ -233,7 +233,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/images/photoofme.jpeg
 
 
 # Table Of Contents in the Sidebar
@@ -407,7 +407,7 @@ wildfire:
     siteId:
   # other configs
   theme: light # or dark
-  locale: en # or other locales, e.g. zh-CN
+  locale: zh-CN # or other locales, e.g. zh-CN
   defaultAvatarURL:
 # Any question?
 # Raise an issue here: https://github.com/cheng-kang/wildfire/issues
