@@ -216,9 +216,9 @@ font:
 #social:
   #LinkLabel: Link
 social:
-  github: https://github.com/phaedo
-  twitter: https://twitter.com/siyuenlin
-  envelope: mailto:siyuen.lin@gmail.com
+  Github: https://github.com/phaedo
+  Twitter: https://twitter.com/siyuenlin
+  Mail: mailto:siyuen.lin@gmail.com
 
 
 
@@ -234,6 +234,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  Mail: envelope
 
 
 # Sidebar Avatar
