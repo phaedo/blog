@@ -3,6 +3,7 @@ layout: post
 title:  "zsh环境下如何补全docker命令"
 date:   2019-07-18 21:03:36 +0530
 categories: Bash
+tag: zsh docker
 ---
 
 1. 确定你使用了oh-my-zsh的shell环境；（如果没有安装的话，推荐使用，官方地址：https://ohmyz.sh/）
