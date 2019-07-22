@@ -1,114 +1,35 @@
-# plainwhite
+# NexT
 
-Simplistic jekyll portfolio-style theme for writers.
+> 精于心，简于形
 
-**Demo**: [thelehhman.com](https://thelehhman.com)
+NexT 是由 [Hexo NexT](https://github.com/iissnan/hexo-theme-next) 移植而来的 Jekyll 主题。<!--commit: f951075d9b739d26b42472431995fa68d08796aa-->
 
-![plainwhite theme preview](/screenshot.png)
+<a href="http://simpleyyt.github.io/jekyll-theme-next/" target="_blank">在线预览 Preview</a> | <a href="http://simpleyyt.com" target="_blank">Yitao's Blog</a> | <a href="http://theme-next.simpleyyt.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.en.md)
+
+[![Join the chat at https://gitter.im/simpleyyt/jekyll-theme-next](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jekyll-theme-next/lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
 
 
-## Installation on Github Pages
+## 浏览器支持 Browser support
 
-Add this line to your site's `_config.yml`:
-```yaml
-remote_theme: thelehhman/plainwhite-jekyll
-```
-## Installation
+![Browser support](http://iissnan.com/nexus/next/browser-support.png)
 
-Add this line to your Jekyll site's `Gemfile`:
 
-```ruby
-gem "plainwhite"
-```
+## 贡献 Contributing
 
-And add this line to your Jekyll site's `_config.yml`:
+欢迎提交问题与需求，修复代码。
 
-```yaml
-theme: plainwhite
-```
 
-And then execute:
+## 开发 Development
 
-    $ bundle
+NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。
 
-Or install it yourself as:
+NexT is built for easily use with elegant appearance. First things first, always keep things simple.
 
-    $ gem install plainwhite
 
-## Usage
+## 捐赠
 
-The "plainwhite" key in _config.yml is used to customize the theme data.
-```yaml
-plainwhite:
-  name: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
+支付宝捐赠链接还是要有的，万一真的有人捐呢。
 
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman # format: locale/username
-```
-
-**Updating Placeholder Image**
-
-The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
-
-**Comments (Disqus)**
-
-Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
-```yaml
-plainwhite:
-  disqus_shortname: games
-```
-
-**Google Analytics**
-
-It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
-```yaml
-plainwhite:
-  analytics_id: '< YOUR ID >'
-```
-
-**Sitemap**
-
-It can be toggled by the following line to under plainwhite in  `_config.yml`
-
-```yaml
-plainwhite:
-  sitemap: true
-```
-
-**Excerpts**
-
-Excerpts can be enabled by adding the following line to your `_config.yml`
-```yaml
-show_excerpts: true
-```
-**Layouts**
-
-- Home
-- Page
-- Post
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## More themes
-
-- [Texture](https://github.com/thelehhman/texture)
-- [jekyllthemes](http://jekyllthemes.org/)
+![支付宝扫码捐赠](http://7lryc0.com1.z0.glb.clouddn.com/a6x049034plyvjm1rvn4h28%20%281%29.png)
