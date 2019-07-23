@@ -445,7 +445,7 @@ gitalk:
   enable: true
   clientID: 1496ea14b0b18810a4fe
   clientSecret: 0f7517263bb0fa7b00fff9e61d892d4aca74a798
-  repo: https://github.com/phaedo/blog
+  repo: https://phaedo.github.io/blog
   owner: phaedo
   admin: phaedo
 
