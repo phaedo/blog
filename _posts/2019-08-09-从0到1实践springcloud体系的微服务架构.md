@@ -3,7 +3,7 @@ layout: post
 title:  "从0到1实践SpringCloud体系的微服务架构（一）"
 date:   2019-08-09 21:03:36 +0530
 categories: Web
-tags: [springboot]
+tags: [springboot, web]
 description: 实践SpringCloud体系的微服务架构
 ---
 
@@ -19,7 +19,7 @@ Dubbo是基于NettyNIO的TCP协议通信的，客户端Bean由spring容器管理
 
 SpringCloud是基于HTTP协议通信的，鼓励用RestAPI的风格去定义接口，使得它天然地支持系统内部异构。它使用一套组件实现了服务注册，负载均衡，智能路由等能力。但是调用过程的效率不高。
 
-对比于Dubbo，SpringCloud的服务调用效率，参考网上的一篇[实验](https://mp.weixin.qq.com/s/omVAEzQTcV5o5AGsSU_u7Q)，有入校结论，无论是数据量大或小，Dubbo的性能都远高于SpringCloud。但是由于Dubbo在2017年前后断断续续已经没有更新，所以更加活跃SpringCloud体系得到广泛使用。
+对比于Dubbo，SpringCloud的服务调用效率，参考网上的一篇[实验](https://mp.weixin.qq.com/s/omVAEzQTcV5o5AGsSU_u7Q)，有如下结论，无论是数据量大或小，Dubbo的性能都远高于SpringCloud（高出约约2-3倍）。但是由于Dubbo在2017年前后断断续续已经没有更新，所以更加活跃SpringCloud体系得到广泛使用。
 
 ![dubbo-vs-springcloud-t](https://phaedo.github.io/blog/post-assets/2019-08/dubbo-vs-springcloud-t.png)  
 ![dubbo-vs-springcloud-f](https://phaedo.github.io/blog/post-assets/2019-08/dubbo-vs-springcloud-f.png)  
