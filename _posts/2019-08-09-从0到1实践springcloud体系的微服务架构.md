@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "从0到1实践SpringCloud体系的微服务架构（一）"
+title:  "从0到1实践SpringCloud的微服务架构系统（一）"
 date:   2019-08-09 21:03:36 +0530
 categories: Web
 tags: [springboot, web]
-description: 实践SpringCloud体系的微服务架构
+description: 实践SpringCloud的微服务架构系统
 ---
 
 微服务是面向人的敏捷开发模式经过深入实践后的产物。按照《人月神话》的说法，系统开发速度和资源投入的关系是存在饱和度的，并不是投入足够的资源，就能有对应的线性产出。当一个系统维护的人过多时，反而会导致开发和运维的成本上升。
