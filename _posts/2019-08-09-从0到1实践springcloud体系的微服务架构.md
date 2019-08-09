@@ -7,11 +7,15 @@ tags: [springboot, web]
 description: 实践SpringCloud的微服务架构系统
 ---
 
+## 微服务
+
 微服务是面向人的敏捷开发模式经过深入实践后的产物。按照《人月神话》的说法，系统开发速度和资源投入的关系是存在饱和度的，并不是投入足够的资源，就能有对应的线性产出。当一个系统维护的人过多时，反而会导致开发和运维的成本上升。
 
 另外当一个系统足够庞大时，内部错综复杂的依赖和调用关系，导致了学习和维护成本上升。因此如果把复杂的系统分解为一个个足够内聚足够微小的（代码量在10w左右）系统，对外暴露其核心业务接口，通过一系列不同业务系统的服务接口编排，表达一个完整的业务语义，实现统一的对外功能。这样使得复杂系统间的依赖和调用是可视的，可治理的。同时每个微服务内部的开发和维护成本也变低。
 
 另外，微服务也使得系统在高可用和扩展性上有明显优势，因此一个新的系统架构伴随着研发协作模式诞生了。
+
+## Dubbo && SpringCloud
 
 微服务架构的核心就是服务治理，在中国常常有两个被提起的服务治理框架，Dubbo和SpringCloud，它们都是开源的。
 
@@ -24,6 +28,8 @@ SpringCloud是基于HTTP协议通信的，鼓励用RestAPI的风格去定义接�
 ![dubbo-vs-springcloud-t](https://phaedo.github.io/blog/post-assets/2019-08/dubbo-vs-springcloud-t.png)  
 ![dubbo-vs-springcloud-f](https://phaedo.github.io/blog/post-assets/2019-08/dubbo-vs-springcloud-f.png)  
 
+## SpringCloud核心组件
+
 一般地，SpringCloud的服务治理的核心组件包括以下（不断补充当中）
 1. Eureka 服务发现
 2. Ribbon 负载均衡
@@ -33,3 +39,6 @@ SpringCloud是基于HTTP协议通信的，鼓励用RestAPI的风格去定义接�
 6. Config 配置隔离
 
 ![springcloud](https://phaedo.github.io/blog/post-assets/2019-08/springcloud.png)
+
+## Ref
+1. [link](https://juejin.im/post/5be13b83f265da6116393fc7)
