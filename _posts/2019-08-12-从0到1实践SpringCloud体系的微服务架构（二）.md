@@ -18,9 +18,32 @@ Netflix公司建议按如下图部署Eureka服务，首先它包含了一个Eure
 
 ## 配置Eureka Server
 
-1. 从[SpringInitializer](https://start.spring.io/)中选择eureka-server作为依赖，下载初始zip包。
+1. 从[SpringInitializer](https://start.spring.io/)中选择eureka-server作为依赖，下载初始zip包，pom中包含如下依赖。
+```xml
+<dependencies>
+  <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+  </dependency>
+</dependencies>
+```
 
 2. 在启动类中增加`@EnableEurekaServer`注解
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@EnableEurekaServer
+@SpringBootApplication
+public class EurekaServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EurekaServerApplication.class, args);
+	}
+
+}
+```
 
 3. 设置eureka-server集群，包括两台机器server1 && server2保证高可用（其他可配置属性参考[EurekaInstanceConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java)和[EurekaClientConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaClientConfigBean.java)）
 
