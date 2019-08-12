@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2019-08-12-从0到1实践SpringCloud的微服务架构系统（二）"
+title:  "从0到1实践SpringCloud的微服务架构系统（二）"
 date:   2019-08-12 21:03:36 +0530
 categories: Web
 tags: [springboot, web]
