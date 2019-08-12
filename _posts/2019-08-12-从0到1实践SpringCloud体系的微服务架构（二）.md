@@ -22,7 +22,7 @@ Netflix公司建议按如下图部署Eureka服务，首先它包含了一个Eure
 
 2. 在启动类中增加`@EnableEurekaServer`注解
 
-3. 设置eureka-server集群，包括两台机器server1 && server2保证高可用（其他默认属性可参考[EurekaInstanceConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java)和[EurekaClientConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaClientConfigBean.java)）
+3. 设置eureka-server集群，包括两台机器server1 && server2保证高可用（其他可配置属性参考[EurekaInstanceConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java)和[EurekaClientConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaClientConfigBean.java)）
 
 4. 打包eureka-server.jar   
 ```bash
