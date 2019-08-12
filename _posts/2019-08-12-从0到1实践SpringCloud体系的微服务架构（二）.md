@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2019-08-从0到1实践SpringCloud的微服务架构系统（二）"
+title:  "2019-08-12-从0到1实践SpringCloud的微服务架构系统（二）"
 date:   2019-08-12 21:03:36 +0530
 categories: Web
 tags: [springboot, web]
@@ -13,7 +13,7 @@ Eureka是一个基于REST HTTP协议的服务注册中心，包含Eureka Server�
 
 Netflix按如下图部署Eureka服务，首先它包含了一个Eureka Server集群，分部在各个域内（一个云服务单位，一般一个域是一个机房），Eureka Client只向域内的Eureka Server注册服务。Eureka Client每30s发送一次心跳，同时会将当前的服务注册表缓存在本地（所以一般注册表的变化最长需要花费2min才能完成传播）。如果某个服务90秒内无心跳记录，则该服务会被下线。接着服务注册表的变更会在Eureka Server集群内传播，保证Eureka Client可以在域间调用服务。
 
-![eureka-architecture](../post-assets/2019-08/eureka-architecture.png)
+![eureka-architecture](https://phaedo.github.io/blog/post-assets/2019-08/eureka-architecture.png)
 
 
 ## 配置Eureka Server

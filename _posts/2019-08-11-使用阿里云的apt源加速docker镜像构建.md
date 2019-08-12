@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2019-08-使用国内软件源镜像加速docker镜像构建"
+title:  "2019-08-11-使用国内软件源镜像加速docker镜像构建"
 date:   2019-08-11 21:03:36 +0530
 categories: OS
 tags: [docker]
