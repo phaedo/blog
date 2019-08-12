@@ -11,7 +11,7 @@ description: 实践SpringCloud的微服务架构系统-Eureka
 
 Eureka是一个基于REST HTTP协议的服务注册中心，包含Eureka Server和Eureka Client两部分。Eureka Server用于记录和路由服务的地址和端口号，Eureka Client用于向Eureka Server登记和调用服务。一般Eureka Client会与其他组件配置，完成复杂的负载均衡，如基于网络拥塞率，资源利用率，错误率的负载均衡方法。Eureka Client也支持非JAVA版本的实现。
 
-Netflix按如下图部署Eureka服务，首先它包含了一个Eureka Server集群，分部在各个域内（一个云服务单位，一般一个域是一个机房），Eureka Client只向域内的Eureka Server注册服务。Eureka Client每30s发送一次心跳，同时会将当前的服务注册表缓存在本地（所以一般注册表的变化最长需要花费2min才能完成传播）。如果某个服务90秒内无心跳记录，则该服务会被下线。接着服务注册表的变更会在Eureka Server集群内传播，保证Eureka Client可以在域间调用服务。
+Netflix公司建议按如下图部署Eureka服务，首先它包含了一个Eureka Server集群，分部在各个域内（一个云服务单位，一般一个域是一个机房），Eureka Client只向域内的Eureka Server注册服务。Eureka Client每30s发送一次心跳，同时会将当前的服务注册表缓存在本地（所以一般注册表的变化最长需要花费2min才能完成传播）。如果某个服务90秒内无心跳记录，则该服务会被下线。接着服务注册表的变更会在Eureka Server集群内传播，保证Eureka Client可以在域间调用服务。
 
 ![eureka-architecture](https://phaedo.github.io/blog/post-assets/2019-08/eureka-architecture.png)
 
@@ -22,7 +22,7 @@ Netflix按如下图部署Eureka服务，首先它包含了一个Eureka Server集
 
 2. 在启动类中增加`@EnableEurekaServer`注解
 
-3. 设置eureka-server集群，包括两台机器server1 && server2保证高可用（其他默认属性可参考[DefaultEurekaServerConfig](https://github.com/Netflix/eureka/blob/master/eureka-core/src/main/java/com/netflix/eureka/DefaultEurekaServerConfig.java)）
+3. 设置eureka-server集群，包括两台机器server1 && server2保证高可用（其他默认属性可参考[EurekaInstanceConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java)和[EurekaClientConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaClientConfigBean.java)）
 
 4. 打包eureka-server.jar   
 ```bash
