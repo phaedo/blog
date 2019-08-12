@@ -22,16 +22,16 @@ Netflix按如下图部署Eureka服务，首先它包含了一个Eureka Server集
 
 2. 在启动类中增加`@EnableEurekaServer`注解
 
-3. 设置eureka-server集群，包括两台机器server1 && server2（其他默认属性可参考[DefaultEurekaServerConfig](https://github.com/Netflix/eureka/blob/master/eureka-core/src/main/java/com/netflix/eureka/DefaultEurekaServerConfig.java)）
+3. 设置eureka-server集群，包括两台机器server1 && server2保证高可用（其他默认属性可参考[DefaultEurekaServerConfig](https://github.com/Netflix/eureka/blob/master/eureka-core/src/main/java/com/netflix/eureka/DefaultEurekaServerConfig.java)）
 
-4. 打包eureka-server.jar
-```sh
+4. 打包eureka-server.jar   
+```bash
 $ mvn install
 $ cp target/eureka-server.jar /path/to/dockerfile
 ```
 
-5. 制作eureka-server的镜像，注意要将jar包放入上下文路径中，示例的dockerfile如下。
-```sh
+5. 制作eureka-server的镜像，注意要将jar包放入上下文路径中，示例的dockerfile如下。   
+```bash
 FROM ubuntu:latest
 RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
     && DEBIAN_FRONTEND=noninteractive \
@@ -39,15 +39,16 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
     && apt-get update -y \
     && apt-get install -y openjdk-8-jdk-headless
 COPY ./eureka-server.jar /root/
-CMD java -jar eureka-server.jar```
+CMD java -jar eureka-server.jar
+```
 
 6. docker镜像打包（最后一个点是上下文）
-```sh
+```bash
 $ docker build -t eureka-server:latest .
 ```
 
-7. 启动eureka-server集群，示例映射为7001和7002端口
-```
+7. 启动eureka-server集群，示例映射为7001和7002端口    
+```bash
 $ docker run -d --name eureka-server1 -p 7001:7001 eureka-server:latest
 $ docker run -d --name eureka-server2 -p 7001:7002 eureka-server:latest
 ```
