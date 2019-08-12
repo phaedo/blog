@@ -56,6 +56,67 @@ $ docker run -d --name eureka-server2 -p 7001:7002 eureka-server:latest
 
 ## 测试Eureka Client
 
+1. 初始化一个SpringBoot工程，引入下列依赖
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+```
+
+2. 设置Eureka Client的属性
+
+```yaml
+server:
+    port: 8081
+
+spring:
+    application:
+        name: demo-client
+
+eureka:
+    instance: demo-client
+        prefer-ip-address: true
+        instance-id:  ${spring.application.name}(${spring.cloud.client.ip-address}:${server.port})
+    client:
+        register-with-eureka: true
+        fetch-registry: true
+        serviceUrl:
+            defaultZone: http://server1:7001/eureka, http://server1:7002/eureka
+```
+
+3. 在启动器中增加`@EnableEurekaClient`注解
+
+```java
+@EnableEurekaClient
+@SpringBootApplication
+public class WebApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(WebApplication.class, args);
+	}
+
+}
+```
+
+4. 启动demo应用和上一节的Eureka Server集群，即可看到服务已注册到Eureka Server中。
+
+![eureka-client.png](https://phaedo.github.io/blog/post-assets/2019-08/eureka-client.png)
+
 
 ## Ref
 1. [Netflix-WIKI](https://github.com/Netflix/eureka/wikiM)
