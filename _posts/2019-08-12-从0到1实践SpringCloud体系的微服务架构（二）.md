@@ -18,7 +18,7 @@ Netflix公司建议按如下图部署Eureka服务，首先它包含了一个Eure
 
 ## 配置Eureka Server
 
-1. 从[SpringInitializer](https://start.spring.io/)中选择eureka-server作为依赖，下载初始zip包，pom中包含如下依赖。
+1. 从[SpringInitializer](https://start.spring.io/)中选择eureka-server作为依赖，下载初始zip包，pom中包含如下依赖。   
 ```xml
 <dependencies>
   <dependency>
@@ -28,7 +28,7 @@ Netflix公司建议按如下图部署Eureka服务，首先它包含了一个Eure
 </dependencies>
 ```
 
-2. 在启动类中增加`@EnableEurekaServer`注解
+2. 在启动类中增加`@EnableEurekaServer`注解  
 ```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
