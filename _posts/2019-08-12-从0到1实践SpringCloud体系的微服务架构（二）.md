@@ -18,7 +18,8 @@ Netflix公司建议按如下图部署Eureka服务，首先它包含了一个Eure
 
 ## 配置Eureka Server
 
-1. 从[SpringInitializer](https://start.spring.io/)中选择eureka-server作为依赖，下载初始zip包，pom中包含如下依赖。   
+1. 从[SpringInitializer](https://start.spring.io/)中选择eureka-server作为依赖，下载初始zip包，pom中包含如下依赖。
+
 ```xml
 <dependencies>
   <dependency>
@@ -28,7 +29,8 @@ Netflix公司建议按如下图部署Eureka服务，首先它包含了一个Eure
 </dependencies>
 ```
 
-2. 在启动类中增加`@EnableEurekaServer`注解  
+2. 在启动类中增加`@EnableEurekaServer`注解
+
 ```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -47,13 +49,15 @@ public class EurekaServerApplication {
 
 3. 设置eureka-server集群，包括两台机器server1 && server2保证高可用（其他可配置属性参考[EurekaInstanceConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java)和[EurekaClientConfigBean](https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaClientConfigBean.java)）
 
-4. 打包eureka-server.jar   
+4. 打包eureka-server.jar
+
 ```bash
 $ mvn install
 $ cp target/eureka-server.jar /path/to/dockerfile
 ```
 
-5. 制作eureka-server的镜像，注意要将jar包放入上下文路径中，示例的dockerfile如下。   
+5. 制作eureka-server的镜像，注意要将jar包放入上下文路径中，示例的dockerfile如下。
+
 ```bash
 FROM ubuntu:latest
 RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
@@ -66,11 +70,13 @@ CMD java -jar eureka-server.jar
 ```
 
 6. docker镜像打包（最后一个点是上下文）
+
 ```bash
 $ docker build -t eureka-server:latest .
 ```
 
-7. 启动eureka-server集群，示例映射为7001和7002端口    
+7. 启动eureka-server集群，示例映射为7001和7002端口
+
 ```bash
 $ docker run -d --name eureka-server1 -p 7001:7001 eureka-server:latest
 $ docker run -d --name eureka-server2 -p 7001:7002 eureka-server:latest
