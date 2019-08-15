@@ -71,7 +71,7 @@ public class LocaleInterceptorConfiguration implements WebMvcConfigurer {
 }
 ```
 
-### 1.2 定义MessageSources
+### 1.2 定义ResourceBundle
 
 默认情况下，SpringBoot应用程序将在src/main/resources文件夹中查找包含国际化键和值的消息文件。 缺省语言环境的文件名称为translate.properties，并且每个语言环境的文件将被命名为translate_XX.properties，其中XX是语言环境代码。 要进行本地化的值的键必须在每个文件中都是相同的，其值应与其对应的语言相适应。
 
@@ -95,14 +95,14 @@ greeting=你好！{0}
 @Bean
 public ReloadableResourceBundleMessageSource messageSource() {
     ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-    messageSource.setBasename("classpath:messages");
+    messageSource.setBasename("classpath:lang/translate");
     messageSource.setDefaultEncoding("UTF-8");
     return messageSource;
 }
 ```
 
 ### 1.5 测试效果
-通过POSTMAN模拟cookie值分别为`lang=en_US;`和`lang=zh_CN;`可以读取到不同的语言。
+通过POSTMAN模拟cookie值分别为`lang=en_US;`和`lang=zh_CN;`可以读取到不同的语言结果。
 
 ```java
 @RestController
