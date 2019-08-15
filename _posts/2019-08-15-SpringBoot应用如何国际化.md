@@ -56,9 +56,18 @@ public class WebBeanConfiguration {
 将`LocaleChangeInterceptor`添加到应用程序的拦截器注册表中。
 
 ```java
-@Override
-public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(localeChangeInterceptor());
+/**
+ * @description 添加拦截器配置
+ **/
+@Configuration
+public class LocaleInterceptorConfiguration implements WebMvcConfigurer {
+    @Autowired
+    LocaleChangeInterceptor localeChangeInterceptor;
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(localeChangeInterceptor);
+    }
 }
 ```
 
