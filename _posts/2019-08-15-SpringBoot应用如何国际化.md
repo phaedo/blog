@@ -13,7 +13,7 @@ description: SpringBoot的WEB应用在后台支持多语言的几个思路考察
 
 应用层面的文本信息主要存在于用户提示指引，错误描述等地方。一般这些文本类信息会被统一抽取到几个类中统一管理，如错误描述的`ErrorEnum.java`、用户指引`GuidanceEnum.java`，避免出现String类型的魔法值。
 
-### 1.1 `LocaleResolver`
+### 1.1 定义语言环境解析器`LocaleResolver`
 
 为了让我们的应用程序能够确定当前正在使用的语言环境，我们需要在自己的`WebMvcConfig`类中添加一个语言环境解析器`LocaleResolver`。`LocaleResolver`接口能根据会话，`Cookie`，`Accept-Language`头或固定值确定当前语言环境。
 
@@ -88,8 +88,8 @@ translate_zh_CN.properties
 greeting=你好！{0}
 ```
 
-### 1.3 ReloadableResourceBundleMessageSource
-使用MessageSource来管理国际资源文件，获取对应的文本
+### 1.3 定义MessageSource
+使用MessageSource来管理国际资源文件，获取对应的文本。注意工程文件中`translate_*.properties`文件放置在`resources/lang`目录下。
 
 ```java
 @Bean
