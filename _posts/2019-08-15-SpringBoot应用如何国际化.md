@@ -15,11 +15,11 @@ description: SpringBoot的WEB应用在后台支持多语言的几个思路考察
 
 ### 1.1 `LocaleResolver`
 
-为了让我们的应用程序能够确定当前正在使用的语言环境，我们需要在自己的`WebMvcConfig`类中添加一个`LocaleResolver`，有几种可选的`FixedLocaleResolver`、`AcceptHeaderLocaleResolver`、`SessionLocaleResolver`、`CookieLocaleResolver`。
+为了让我们的应用程序能够确定当前正在使用的语言环境，我们需要在自己的`WebMvcConfig`类中添加一个语言环境解析器`LocaleResolver`。`LocaleResolver`接口能根据会话，`Cookie`，`Accept-Language`头或固定值确定当前语言环境。
 
-以`CookieLocaleResolver`为例，`LocaleResolver`接口能根据会话，`Cookie`，`Accept-Language`头或固定值确定当前语言环境。 在我们的例子中，我们使用了基于Cookie的解析器`CookieLocaleResolver`并设置了一个值为CN的默认语言环境。
+在例子中，我们使用了基于Cookie的解析器`CookieLocaleResolver`并设置了一个值为CN的默认语言环境。其他可选的语言环境解析器包括`FixedLocaleResolver`、`AcceptHeaderLocaleResolver`、`SessionLocaleResolver`、`CookieLocaleResolver`。
 
-接下来，需要添加一个拦截器bean，该bean将根据Cookie中的lang的值切换到新的区域设置。
+接下来，需要添加一个拦截器bean，该bean将根据Cookie中的lang值切换到新的区域设置。
 
 ```java
 /**
