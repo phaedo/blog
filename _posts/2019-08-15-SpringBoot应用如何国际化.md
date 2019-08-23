@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SpringBoot应用如何国际化"
+title:  "SpringBoot应用如何国际化（一）"
 date:   2019-08-15 21:03:36 +0530
 categories: Web
 tags: [springboot, web]
@@ -111,8 +111,7 @@ public class TestController {
     private ReloadableResourceBundleMessageSource messageSource;
 
     @GetMapping("/testLocale")
-    public String testLocale() {
-        String key = "greeting";
+    public CommonResult<String> testLocale(@RequestParam("key") String key) {
         String param = "tester";
         String greeting = messageSource
             .getMessage(key, new Object[]{param}, LocaleContextHolder.getLocale());
@@ -123,13 +122,7 @@ public class TestController {
 
 ## 2. 数据库层面
 
-参考`Ref`章节的一些讨论，按照实际情况，几种思路可供取舍。
-
-### 2.1 有限的语言支持
-**优势**：简单直接，无性能损失；可以利用Dao层切面，对业务编码透明。
-**缺点**：扩展性差，如果需要增加更多的语言支持时，需要对数据库设计做变动。
-
-### 2.2 可扩展的语言支持
+见[SpringBoot应用如何国际化（二）](#)
 
 ## Ref
 1. [what-are-best-practices-for-multi-language-database-design](https://stackoverflow.com/questions/929410/what-are-best-practices-for-multi-language-database-design)
