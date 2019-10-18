@@ -9,3 +9,5 @@ NexT 是由 [Hexo NexT](https://github.com/iissnan/hexo-theme-next) 移植而来
 ## More themes
 - [Texture](https://github.com/thelehhman/texture)
 - [jekyllthemes](http://jekyllthemes.org/)
+
+## Blog https://phaedo.github.io/blog/
