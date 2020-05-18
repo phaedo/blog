@@ -7,7 +7,7 @@ tags: [springboot]
 description: Springboot核心理念是约定大于配置，据此Springboot的开发团队提供一种定义开箱即用组件的能力，称为starter
 ---
 
-Springboot核心理念是约定大于配置，据此Springboot的开发团队提供一种定义开箱即用组件的能力，称为starter。例如spring-boot-starter-logging, spring-boot-starter-test等。组件的使用者只需要引用该starter组件，按需配置即可使用，不需要过多地关心组件的启动和回收，从而把精力聚焦到组件的业务实践上。
+Springboot核心理念是约定大于配置，据此Springboot的开发团队提供一种定义开箱即用组件的能力，称为starter。例如spring-boot-starter-logging, spring-boot-starter-test等。这些starter组件具备自动配置的能力，组件的使用者只需要引入该starter组件，不需要过多地关心组件的启动和回收，从而可以把更多精力聚焦到组件的业务实践上。
 
 ### Starter的启动原理
 
